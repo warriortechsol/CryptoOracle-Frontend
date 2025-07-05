@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PredictionPanel() {
+export default function PredictionPanel() {
   return (
     <div style={styles.panel}>
       <h2 style={styles.title}>🔮 Prediction Panel</h2>
@@ -46,7 +46,4 @@ const styles = {
     fontSize: '0.9rem',
   },
 }
-
-export default PredictionPanel
-
 
