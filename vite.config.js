@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cryptooracle/' // only needed for GitHub Pages
+  base: '/CryptoOracle-Frontend/'
 })
