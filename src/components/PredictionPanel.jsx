@@ -47,22 +47,3 @@ const styles = {
   },
 }
 
-  },
-  text: {
-    fontSize: '1rem',
-    color: '#cccccc',
-    marginBottom: '1.5rem',
-  },
-  placeholder: {
-    background: '#222',
-    border: '2px dashed #555',
-    borderRadius: '8px',
-    padding: '2rem',
-    color: '#888',
-  },
-  chartNote: {
-    fontStyle: 'italic',
-    fontSize: '0.9rem',
-  },
-}
-
