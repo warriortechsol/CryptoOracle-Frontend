@@ -46,4 +46,3 @@ const styles = {
     fontSize: '0.9rem',
   },
 }
-
