@@ -13,7 +13,6 @@ export default function App() {
 
       <section style={styles.panelSection}>
         <PredictionPanel />
-        {/* Add SentimentPanel, RecommenderPanel, Sidebar here later */}
       </section>
     </main>
   )
@@ -25,8 +24,26 @@ const styles = {
     padding: '2rem',
     backgroundColor: '#0d0d0d',
     color: '#f0f0f0',
-    fontFamily: 'Segoe UI, sans-serif'
+    fontFamily: 'Segoe UI, sans-serif',
   },
+  header: {
+    marginBottom: '2rem',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: '2.5rem',
+    color: '#00ffff',
+  },
+  subtitle: {
+    fontSize: '1.1rem',
+    color: '#cccccc',
+  },
+  panelSection: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+}
+
   header: {
     marginBottom: '2rem',
     textAlign: 'center'
