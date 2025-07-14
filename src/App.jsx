@@ -10,7 +10,6 @@ export default function App() {
           Predict tomorrow’s crypto. Today. Powered by sentiment & machine learning.
         </p>
       </header>
-
       <section style={styles.panelSection}>
         <PredictionPanel />
       </section>
@@ -24,23 +23,24 @@ const styles = {
     padding: '2rem',
     backgroundColor: '#0d0d0d',
     color: '#f0f0f0',
-    fontFamily: 'Segoe UI, sans-serif',
+    fontFamily: 'Segoe UI, sans-serif'
   },
   header: {
     marginBottom: '2rem',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   title: {
     fontSize: '2.5rem',
-    color: '#00ffff',
+    color: '#00ffff'
   },
   subtitle: {
     fontSize: '1.1rem',
-    color: '#cccccc',
+    color: '#cccccc'
   },
   panelSection: {
     display: 'flex',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 }
+
 
