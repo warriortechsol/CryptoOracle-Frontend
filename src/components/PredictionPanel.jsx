@@ -18,7 +18,7 @@ export default function PredictionPanel() {
     ADA: "cardano"
   }
 
-  // 🔄 Fetch live price when symbol or autoMode toggles
+  // 🔄 Fetch live price when symbol or mode changes
   useEffect(() => {
     if (!isAutoMode) return
     async function fetchPrice() {
@@ -38,7 +38,7 @@ export default function PredictionPanel() {
     fetchPrice()
   }, [selectedSymbol, isAutoMode])
 
-  // 🔮 Trigger prediction request
+  // 🔮 Trigger prediction
   useEffect(() => {
     setLoading(true)
     axios.post("https://cryptooracle.onrender.com/predict", {
@@ -60,7 +60,7 @@ export default function PredictionPanel() {
       })
   }, [selectedSymbol, priceInput, refreshKey])
 
-  // 🔁 Optional: auto-refresh every 60s
+  // 🔁 Auto-refresh every 60s
   useEffect(() => {
     const interval = setInterval(() => {
       setRefreshKey(k => k + 1)
@@ -114,7 +114,7 @@ export default function PredictionPanel() {
         🔁 Refresh Prediction
       </button>
 
-      {/* Output */}
+      {/* Output Block */}
       {loading ? (
         <p style={styles.text}>Loading prediction...</p>
       ) : prediction ? (
@@ -152,7 +152,7 @@ export default function PredictionPanel() {
             </div>
           </div>
 
-          {/* Forecast History */}
+          {/* History Feed */}
           <div style={styles.history}>
             <h3 style={styles.historyTitle}>📦 Recent Forecasts</h3>
             {history.map((entry, i) => (
@@ -263,8 +263,25 @@ const styles = {
     borderRadius: '6px',
     textAlign: 'center',
     display: 'inline-block',
-
-            
+    marginTop: '0.5rem'
+  },
+    history: {
+    marginTop: '2rem',
+    backgroundColor: '#222',
+    padding: '1rem',
+    borderRadius: '8px',
+    boxShadow: '0 0 4px rgba(0,255,255,0.1)'
+  },
+    historyTitle: {
+    fontSize: '1.2rem',
+    color: '#0ff',
+    marginBottom: '0.5rem'
+  },
+  historyItem: {
+    fontSize: '0.95rem',
+    color: '#ccc',
+    marginBottom: '0.25rem',
+    lineHeight: '1.4'
   }
 }
 
